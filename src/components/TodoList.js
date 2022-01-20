@@ -140,12 +140,11 @@ class TodoList extends Component {
                       variant="success"
                     >
                       Date: {task.date} Time: {task.time} Discription :
-                      {task.taskTitle} am feeling today:{task.emoji}
+                      {task.taskTitle}&nbsp; am feeling today:{task.emoji}
                       <Button
                         style={{ marginLeft: '50px' }}
                         className="edit"
                         type="button"
-                        //   variant="primary"
                         onClick={this.editTodo}
                         value={index}
                       >
@@ -164,7 +163,7 @@ class TodoList extends Component {
                     </ListGroup.Item>
                   );
                 })
-              : "You Any Todo's Today"}
+              : "You  dont have Any Todo's Today"}
           </ListGroup>
         </div>
       </>
