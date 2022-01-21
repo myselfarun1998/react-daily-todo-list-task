@@ -124,7 +124,34 @@ class TodoList extends Component {
           />{' '}
           <label>😭</label>
           <br />
-          <Button type="submit" className="success">
+          <div className="">
+            <Button
+              className="emo"
+              style={{ backgroundColor: '#041562' }}
+              class="btn btn-primary btn-lg active"
+            >
+              😃
+            </Button>
+            <Button
+              className="emo"
+              style={{ backgroundColor: '#041562' }}
+              class="btn btn-primary btn-lg active"
+            >
+              😏
+            </Button>
+            <Button
+              className="emo"
+              style={{ backgroundColor: '#041562' }}
+              class="btn btn-primary btn-lg active"
+            >
+              😭
+            </Button>
+          </div>
+          <Button
+            type="submit"
+            style={{ marginTop: '12%' }}
+            className="success"
+          >
             Submit
           </Button>
         </Form>

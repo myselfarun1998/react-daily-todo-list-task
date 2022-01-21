@@ -54,5 +54,13 @@ button {
   display: inline;
   font-family: 'Poppins', sans-serif;
   margin-left: 12px;
-  text-transform: capitalize  ;
+  text-transform: capitalize;
+}
+.emo {
+  margin-left: 2%;
+  font-size: 25px;
+  justify-content: space-between;
+  border-radius: 40px;
+  background-color: none;
+ 
 }
