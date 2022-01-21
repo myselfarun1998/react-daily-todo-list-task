@@ -102,7 +102,7 @@ class TodoList extends Component {
             />
           </Form.Group>
           <label>Whats your feeling today</label> <br />
-          <input
+          {/* <input
             className="radio-btn"
             name="emjio"
             type="radio"
@@ -123,10 +123,12 @@ class TodoList extends Component {
             value="😭"
           />{' '}
           <label>😭</label>
-          <br />
+          <br /> */}
           <div className="">
             <Button
               className="emo"
+              name="emjio"
+              value="😃"
               style={{ backgroundColor: '#041562' }}
               class="btn btn-primary btn-lg active"
             >
@@ -134,6 +136,8 @@ class TodoList extends Component {
             </Button>
             <Button
               className="emo"
+              name="emjio"
+              value="😏"
               style={{ backgroundColor: '#041562' }}
               class="btn btn-primary btn-lg active"
             >
@@ -141,6 +145,8 @@ class TodoList extends Component {
             </Button>
             <Button
               className="emo"
+              name="emjio"
+              value="😭"
               style={{ backgroundColor: '#041562' }}
               class="btn btn-primary btn-lg active"
             >
