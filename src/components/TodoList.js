@@ -129,7 +129,6 @@ class TodoList extends Component {
           </Button>
         </Form>
         <div className="box">
-          <p>hii test</p>
           <ListGroup className="list text-white">
             {this.state.todoList.length
               ? this.state.todoList.map((task, index) => {
@@ -139,8 +138,12 @@ class TodoList extends Component {
                       key={index}
                       variant="success"
                     >
-                      Date: {task.date} Time: {task.time} Discription :
-                      {task.taskTitle}&nbsp; am feeling today:{task.emoji}
+                      <div className="emoji">{task.emoji}&nbsp;&nbsp;</div>
+                      <div className="disc">{task.taskTitle}&nbsp;&nbsp; </div>
+                      <p className="txt">
+                        {' '}
+                        {task.date}&nbsp;&nbsp; {task.time}
+                      </p>
                       <Button
                         style={{ marginLeft: '50px' }}
                         className="edit"
