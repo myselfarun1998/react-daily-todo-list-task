@@ -12,6 +12,7 @@ class TodoList extends Component {
       todoList: [],
       edited: false,
     };
+    this.edit = false;
   }
 
   addTodo = (event) => {
@@ -37,6 +38,7 @@ class TodoList extends Component {
   };
 
   editTodo = (event) => {
+    this.edit = true;
     const indexvalue = parseInt(event.target.value);
     console.log('indexvalue:', indexvalue);
     const { date, emoji, taskTitle, time } = this.state.todoList.filter(
@@ -60,6 +62,7 @@ class TodoList extends Component {
   };
 
   deleteTodo = (event) => {
+    this.edit = false;
     this.state.todoList.splice(event.target.value, 1);
     this.setState({
       todoList: this.state.todoList,
@@ -138,7 +141,7 @@ class TodoList extends Component {
               className="emo"
               name="emjio"
               value="😏"
-              style={{ backgroundColor: '#041562' }}
+              style={{ backgroundColor: '#041562', borderStyle: 'dotted' }}
               class="btn btn-primary btn-lg active"
             >
               😏
@@ -153,13 +156,24 @@ class TodoList extends Component {
               😭
             </Button>
           </div>
-          <Button
-            type="submit"
-            style={{ marginTop: '12%' }}
-            className="success"
-          >
-            Submit
-          </Button>
+          {!this.edit && (
+            <Button
+              type="submit"
+              style={{ marginTop: '12%' }}
+              className="success"
+            >
+              Submit
+            </Button>
+          )}
+          {this.edit && (
+            <Button
+              type="submit"
+              style={{ marginTop: '12%' }}
+              className="success"
+            >
+              update
+            </Button>
+          )}
         </Form>
         <div className="box">
           <ListGroup className="list text-white">
